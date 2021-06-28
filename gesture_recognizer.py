@@ -36,12 +36,23 @@ class GestureWindow(QMainWindow):
         recognize_button.move(400, 100)
         recognize_button.clicked.connect(self.recognize_button_clicked)
 
+        gesture_name_line = QtWidgets.QLineEdit(self)
+        gesture_name_line.setText("")
+        gesture_name_line.setMinimumSize(400,20)
+        gesture_name_line.move(200,200)
+
+        gesture_save_button = QtWidgets.QPushButton(self)
+        gesture_save_button.setText("save")
+        gesture_save_button.setMinimumSize(50,20)
+        gesture_save_button.move(610,200)
+
 
     def record_button_clicked(self):
         print("record active!")
 
+
     def recognize_button_clicked(self):
-        print("recognition mode activated!")
+        print("recognition active!")
 
 
 def main():
